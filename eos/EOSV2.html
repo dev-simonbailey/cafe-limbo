@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<style>
+body {padding:0; margin:0;}
+.rcorners1 {margin: auto;border-radius: 25px;background: #834063;padding: 20px;width: 98%;}
+#header {background: #834063;padding: 20px;width: 100%;}
+a:link {text-decoration: none;color:#FFFFFF;}
+a:visited {text-decoration: none;color:#FFFFFF;}
+a:hover {text-decoration: underline;color:#FFFFFF;}
+a:active {text-decoration: underline;color:#FFFFFF;}
+</style>
+<title>parcelpet | EOS V2 Client</title>
+<script type='text/javascript'>
+var admin_visible = false;
+var CR = new Array();
+CR[1] = 29;
+CR[2] = 49;
+CR[3] = 67;
+CR[4] = 83;
+CR[5] = 98;
+CR[6] = 112;
+CR[7] = 126;
+CR[8] = 139;
+CR[9] = 152;
+CR[10] = 165;
+CR[11] = 177;
+CR[12] = 189;
+CR[13] = 201;
+CR[14] = 212;
+CR[15] = 222;
+CR[16] = 234;
+CR[17] = 245;
+CR[18] = 256;
+CR[19] = 267;
+CR[20] = 277;
+CR[21] = 288;
+CR[22] = 298;
+CR[23] = 308;
+CR[24] = 318;
+CR[25] = 328;
+CR[26] = 337;
+CR[27] = 347;
+CR[28] = 357;
+CR[29] = 366;
+CR[30] = 376;
+CR[31] = 385;
+CR[32] = 394;
+CR[33] = 404;
+CR[34] = 413;
+CR[35] = 422;
+CR[36] = 431;
+CR[37] = 440;
+CR[38] = 449;
+CR[39] = 457;
+CR[40] = 466;
+CR[41] = 475;
+CR[42] = 484;
+CR[43] = 492;
+CR[44] = 501;
+CR[45] = 509;
+CR[46] = 518;
+CR[47] = 526;
+CR[48] = 535;
+CR[49] = 543;
+CR[50] = 551;
+CR[51] = 559;
+CR[52] = 568;
+CR[53] = 576;
+CR[54] = 584;
+CR[55] = 592;
+CR[56] = 600;
+CR[57] = 608;
+CR[58] = 616;
+CR[59] = 624;
+CR[60] = 632;
+CR[61] = 640;
+CR[62] = 648;
+CR[63] = 655;
+CR[64] = 663;
+CR[65] = 671;
+CR[66] = 679;
+CR[67] = 686;
+CR[68] = 694;
+CR[69] = 702;
+CR[70] = 709;
+
+var LR = new Array();
+LR[1] = 29;
+LR[2] = 48;
+LR[3] = 65;
+LR[4] = 81;
+LR[5] = 96;
+LR[6] = 110;
+LR[7] = 123;
+LR[8] = 136;
+LR[9] = 149;
+LR[10] = 161;
+LR[11] = 173;
+LR[12] = 185;
+LR[13] = 196;
+LR[14] = 208;
+LR[15] = 219;
+LR[16] = 229;
+LR[17] = 240;
+LR[18] = 251;
+LR[19] = 261;
+LR[20] = 271;
+LR[21] = 281;
+LR[22] = 291;
+LR[23] = 301;
+LR[24] = 311;
+LR[25] = 321;
+LR[26] = 330;
+LR[27] = 340;
+LR[28] = 349;
+LR[29] = 358;
+LR[30] = 368;
+LR[31] = 377;
+LR[32] = 386;
+LR[33] = 395;
+LR[34] = 404;
+LR[35] = 413;
+LR[36] = 422;
+LR[37] = 430;
+LR[38] = 439;
+LR[39] = 448;
+LR[40] = 456;
+LR[41] = 465;
+LR[42] = 473;
+LR[43] = 482;
+LR[44] = 490;
+LR[45] = 498;
+LR[46] = 507;
+LR[47] = 515;
+LR[48] = 523;
+LR[49] = 531;
+LR[50] = 539;
+LR[51] = 547;
+LR[52] = 555;
+LR[53] = 563;
+LR[54] = 571;
+LR[55] = 579;
+LR[56] = 587;
+LR[57] = 595;
+LR[58] = 603;
+LR[59] = 611;
+LR[60] = 618;
+LR[61] = 626;
+LR[62] = 634;
+LR[63] = 641;
+LR[64] = 649;
+LR[65] = 657;
+LR[66] = 664;
+LR[67] = 672;
+LR[68] = 679;
+LR[69] = 687;
+LR[70] = 694;
+
+var SP = new Array();
+SP[1] = 27;
+SP[2] = 46;
+SP[3] = 62;
+SP[4] = 77;
+SP[5] = 91;
+SP[6] = 104;
+SP[7] = 117;
+SP[8] = 129;
+SP[9] = 141;
+SP[10] = 153 ;
+SP[11] = 164;
+SP[12] = 175;
+SP[13] = 186;
+SP[14] = 197;
+SP[15] = 207;
+SP[16] = 218;
+SP[17] = 228;
+SP[18] = 238;
+SP[19] = 248;
+SP[20] = 257;
+SP[21] = 267;
+SP[22] = 277;
+SP[23] = 286;
+SP[24] = 295;
+SP[25] = 304;
+SP[26] = 313;
+SP[27] = 322;
+SP[28] = 331;
+SP[29] = 340;
+SP[30] = 349;
+SP[31] = 358;
+SP[32] = 366;
+SP[33] = 375;
+SP[34] = 383;
+SP[35] = 392;
+SP[36] = 400;
+SP[37] = 408;
+SP[38] = 417;
+SP[39] = 425;
+SP[40] = 433;
+SP[41] = 441;
+SP[42] = 449;
+SP[43] = 457;
+SP[44] = 465;
+SP[45] = 473;
+SP[46] = 481;
+SP[47] = 489;
+SP[48] = 496;
+SP[49] = 504;
+SP[50] = 512;
+SP[51] = 519;
+SP[52] = 527;
+SP[53] = 535;
+SP[54] = 542;
+SP[55] = 550;
+SP[56] = 557;
+SP[57] = 565;
+SP[58] = 572;
+SP[59] = 579;
+SP[60] = 587;
+SP[61] = 594;
+SP[62] = 601;
+SP[63] = 609;
+SP[64] = 616;
+SP[65] = 623;
+SP[66] = 630;
+SP[67] = 637;
+SP[68] = 645;
+SP[69] = 652;
+SP[70] = 659;
+
+function showCost()
+	{
+	var thisW = document.getElementById('weight').value;
+	var thisR = document.getElementById('thisInput_12').value;
+	console.log(thisR);
+	if(thisW > 0)
+		{
+		if(thisR === "CR")
+			{
+			var tCost = 12000/CR[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt').innerHTML = "Daily cost: &pound"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt').innerHTML = "Weekly cost: &pound;"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt').innerHTML = "Monthly cost: &pound;"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+CR[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_10').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_10').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		if(thisR === "LR")
+			{
+			var tCost = 12000/LR[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt').innerHTML = "Daily cost: &pound;"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt').innerHTML = "Weekly cost: &pound;"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt').innerHTML = "Monthly cost: &pound;"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+LR[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_10').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_10').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		if(thisR === "SP")
+			{
+			var tCost = 12000/SP[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt').innerHTML = "Daily cost: &pound;"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt').innerHTML = "Weekly cost: &pound;"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt').innerHTML = "Monthly cost: &pound;"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+SP[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_10').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_10').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		}
+
+}
+
+function showCost2()
+	{
+	var thisW = document.getElementById('weight2').value;
+	var thisR = document.getElementById('thisInput_212').value;
+	console.log(thisR);
+	if(thisW > 0)
+		{
+		if(thisR === "CR")
+			{
+			var tCost = 12000/CR[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt2').innerHTML = "Daily cost: �"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt2').innerHTML = "Weekly cost: �"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt2').innerHTML = "Monthly cost: �"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt2').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+CR[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched2').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_210').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched2').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_210').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		if(thisR === "LR")
+			{
+			var tCost = 12000/LR[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt2').innerHTML = "Daily cost: �"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt2').innerHTML = "Weekly cost: �"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt2').innerHTML = "Monthly cost: �"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt2').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+LR[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched2').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_210').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched2').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_210').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		if(thisR === "SP")
+			{
+			var tCost = 12000/SP[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt2').innerHTML = "Daily cost: �"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt2').innerHTML = "Weekly cost: �"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt2').innerHTML = "Monthly cost: �"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt2').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+SP[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched2').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_210').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched2').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_210').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		}
+
+}
+
+function showCost3()
+	{
+	var thisW = document.getElementById('weight3').value;
+	var thisR = document.getElementById('thisInput_312').value;
+	console.log(thisR);
+	if(thisW > 0)
+		{
+		if(thisR === "CR")
+			{
+			var tCost = 12000/CR[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt3').innerHTML = "Daily cost: �"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt3').innerHTML = "Weekly cost: �"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt3').innerHTML = "Monthly cost: �"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt3').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+CR[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched3').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_310').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched3').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_310').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		if(thisR === "LR")
+			{
+			var tCost = 12000/LR[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt3').innerHTML = "Daily cost: �"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt3').innerHTML = "Weekly cost: �"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt3').innerHTML = "Monthly cost: �"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt3').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+LR[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched3').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_310').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched3').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_310').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		if(thisR === "SP")
+			{
+			var tCost = 12000/SP[thisW];
+			var dCost = 39.99/tCost;
+			var wCost = (39.99/tCost)*7;
+			var mCost = (39.99/tCost)*30;
+			document.getElementById('dAmt3').innerHTML = "Daily cost: �"+dCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('wAmt3').innerHTML = "Weekly cost: �"+wCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('mAmt3').innerHTML = "Monthly cost: �"+mCost.toFixed(2)+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+			document.getElementById('fAmt3').innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: "+SP[thisW]+"g";
+			var tFreq = tCost.toFixed(0);
+			if(tFreq <= 28)
+				{
+				tFreq = +tFreq + +28;
+				document.getElementById('pSched3').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_310').value+": 2 bag every "+tFreq+" days";
+				}
+			else
+				{
+				document.getElementById('pSched3').innerHTML = "Personalised Schedule for "+document.getElementById('thisInput_310').value+": 1 bag every "+tFreq+" days";
+				}
+			}
+		}
+
+}
+
+//when the form is submitted, grab the data and add it to the localStorage for processing later.
+function storeData()
+	{
+	var d = new Date();
+	var dd = d.getDate();
+	var mm = d.getMonth()+1;
+	var yy = d.getFullYear();
+	var H = d.getHours();
+	var i = d.getMinutes();
+	var s = d.getSeconds();
+	var x = confirm("Are all the details correct before adding this order?");
+	if(x === true)
+		{
+
+		//TO DO!
+		//if i00 = MI or 2k then we only require basic info 01,02,08,09, set others to default
+
+		//get the Type input and store as var
+		var i00 = document.getElementById('thisInput_00').value;
+
+		//get the Firstname input and store as var
+		var i01 = document.getElementById('thisInput_01').value;
+		if( i01 === ""){i01 = "NONE";}
+
+		//get the Surname input and store as var
+		var i02 = document.getElementById('thisInput_02').value;
+		if( i02 === ""){i02 = "NONE";}
+
+		//get the House Name / Number input and store as var
+		var i03 = document.getElementById('thisInput_03').value;
+		if( i03 === ""){i03 = "NONE";}
+
+		//get the Street Name input and store as var
+		var i04 = document.getElementById('thisInput_04').value;
+		if( i04 === ""){i04 = "NONE";}
+
+		//get the Village/Town/City input and store as var
+		var i05 = document.getElementById('thisInput_05').value;
+		if( i05 === ""){i05 = "NONE";}
+
+		//get the County input and store as var
+		var i06 = document.getElementById('thisInput_06').value;
+		if( i06 === ""){i06 = "NONE";}
+
+		//get the Postcode input and store as var
+		var i07 = document.getElementById('thisInput_07').value;
+		if( i07 === ""){i07 = "NONE";}
+
+		//get the Phone Number input and store as var
+		var i08 = document.getElementById('thisInput_08').value;
+		if( i08 === ""){i08 = "NONE";}
+
+		//get the email address input and store as var
+		var i09 = document.getElementById('thisInput_09').value;
+		if( i09 === ""){i09 = "NONE";}
+
+		//DOG 1
+		//get the Dog 1 Name input and store as var
+		var i10 = document.getElementById('thisInput_10').value;
+		if(i10 === ""){i10 = "NONE";}
+		//get the Dog 1 Size input and store as var
+		var a = document.getElementById("weight");
+		var i11 = a.options[a.selectedIndex].value;
+		//get the dog 1 Preferred Flavour input and store as var
+		var b = document.getElementById("thisInput_12");
+		var i12 = b.options[b.selectedIndex].value;
+
+		//DOG 2
+		//get the Dog 2 Name input and store as var
+		var i210 = document.getElementById('thisInput_210').value;
+		if(i210 === ""){i210 = "NONE";}
+		//get the Dog 2 Size input and store as var
+		var a = document.getElementById("weight2");
+		var i211 = a.options[a.selectedIndex].value;
+		//get the dog 2 Preferred Flavour input and store as var
+		var b = document.getElementById("thisInput_212");
+		var i212 = b.options[b.selectedIndex].value;
+
+		//DOG 3
+		//get the Dog 2 Name input and store as var
+		var i310 = document.getElementById('thisInput_310').value;
+		if(i310 === ""){i310 = "NONE";}
+		//get the Dog 2 Size input and store as var
+		var a = document.getElementById("weight3");
+		var i311 = a.options[a.selectedIndex].value;
+		//get the dog 2 Preferred Flavour input and store as var
+		var b = document.getElementById("thisInput_312");
+		var i312 = b.options[b.selectedIndex].value;
+
+		//get the Payment Type input and store as var
+		var c = document.getElementById("thisInput_13");
+		var i13 = c.options[c.selectedIndex].value;
+
+		//get the Number input and store as var
+		var i14 = document.getElementById('thisInput_14').value;
+		if( i14 === ""){i14 = "NONE";}
+
+		//get the Expiry Date input and store as var
+		var i15 = document.getElementById('thisInput_15a').value+"/"+document.getElementById('thisInput_15b').value;
+		if( i15 === ""){i15 = "NONE";}
+
+		//get the CVV Number input and store as var
+		var i16 = document.getElementById('thisInput_16').value;
+		if( i16 === ""){i16 = "NONE";}
+
+		//get the Special Instructions input and store as var
+		var i17 = document.getElementById('thisInput_17').value;
+		if( i17 === ""){i17 = "NONE";}
+
+		//add cost to day based on var i00 var
+		if(i00 === "MI")
+			{
+			i18 = "0.00";
+			}
+		if(i00 === "2K")
+			{
+			i18 = "5.00";
+			}
+		if(i00 === "TS")
+			{
+			i18 = "1.00";
+			}
+		if(i00 === "FS")
+			{
+			if(i11 === "Giant")
+				{i18 = "79.98";}
+			else
+				{i18 = "39.99";}
+			}
+
+		//get the dog 1 Date food runs out input and store as var
+		var i19 = document.getElementById('thisInput_19a').value + "/" + document.getElementById('thisInput_19b').value + "/" + document.getElementById('thisInput_19c').value;
+
+		//get the dog 2 Date food runs out input and store as var
+		var i219 = document.getElementById('thisInput_219a').value + "/" + document.getElementById('thisInput_219b').value + "/" + document.getElementById('thisInput_219c').value;
+
+		//get the dog 3 Date food runs out input and store as var
+		var i319 = document.getElementById('thisInput_319a').value + "/" + document.getElementById('thisInput_319b').value + "/" + document.getElementById('thisInput_319c').value;
+
+		//get the Dispatch input and store as var
+		var i20 = document.getElementById('thisInput_20').value;
+
+		//get the notes section
+		var i21 = document.getElementById('thisInput_21').value;
+		if(i21 === "")
+			{
+			i21 = "None";
+			}
+
+		var details = localStorage.getItem("userLocation").split(",");
+		var i22 = details[0];
+		var i23 = details[1];
+		var i24 = "FALSE";
+
+		//Create complete order string
+		var thisOrder = "#"+i00+","+i01+","+i02+","+i03+","+i04+","+i05+","+i06+","+i07+","+i08+","+i09+","+i10+","+i11+","+i12+","+i210+","+i211+","+i212+","+i310+","+i311+","+i312+","+i13+","+i14+","+i15+","+i16+","+i17+","+i18+","+i19+","+i219+","+i319+","+i20+","+i21+","+i22+","+i23+","+dd+"/"+mm+"/"+yy+","+H+":"+i+":"+s+","+i24;
+
+		//store order string in localstorage
+		localStorage.setItem("offlineOrders", localStorage.getItem("offlineOrders")+thisOrder);
+
+		//document.getElementById("result").innerHTML = localStorage.getItem("offlineOrders");
+
+		var subType = "";
+		if(i00 === "TS")
+			{
+			subType = "Trial Box";
+			}
+		if(i00 === "MI")
+			{
+			subType = "More Infomation";
+			}
+		if(i00 === "2K")
+			{
+			subType = "2KG Bag";
+			}
+		if(i00 === "FS")
+			{
+			subType = "Full";
+			}
+		alert("A " + subType + " order has been created for\n" + i01 + " " + i02 + ".\nTotal to pay today is �"+ i18);
+		//reload the page to update and reset things.
+		location.reload();
+		}
+	else
+		{
+		return;
+		}
+	}
+//this will initialise the localStorage - BE WARNED ALL PREVIOUS DATA WILL BE LOST IF THIS FUNCTION IS USED!!!!
+function resetData()
+	{
+
+	var a = confirm("This will reset all orders.\nContinue?");
+	if (a === true)
+		{
+		var b = confirm("Are you REALLY sure?");
+			if(b === true)
+				{
+				var c = confirm("Absolutely positive?\nIf you do ALL data will be lost...forever!");
+					if(c === true)
+						{
+	    				localStorage.removeItem("offlineOrders");
+	    				var headerLine = "#Type,First name,Surname,House Name/Number,Street Name,Village/Town/City,County,Postcode,Phone Number,Email Address,Dog 1 Name, Dog 1 Size,Dog 1 Preferred Recipe,Dog 2 Name, Dog 2 Size,Dog 2 Preferred Recipe,Dog 3 Name, Dog 3 Size,Dog 3 Preferred Recipe,Card Type,Card Number,Expiry Date, CVV Number,Delivery Instructions,Cost Today,Dog 1 Date Food Runs Out,Dog 2 Date Food Runs Out,Dog 3 Date Food Runs Out,Dispatch Method,Notes,Team Member,Event Location,Record Date,Record Time,Uploaded";
+						localStorage.setItem("offlineOrders", headerLine);
+						//document.getElementById("result").innerHTML = localStorage.getItem("offlineOrders");
+						//document.getElementById("sendData").value = localStorage.getItem("offlineOrders");
+						//document.getElementById('storeBut').disabled = true;
+						location.reload();
+						}
+					else
+						{
+						return;
+						}
+				}
+			else
+				{
+				return;
+				}
+		}
+	else
+		{
+	    return;
+		}
+	}
+
+function viewOrders()
+	{
+	var total = 0;
+    var x = document.getElementById('result');
+    	//lets get the data from localStorage and split it into rows, then we can work on putting it into a table.
+    	var thisData =  localStorage.getItem("offlineOrders");
+		var rows = thisData.split("#");
+		//now we have it in rows, lets just dump each row on screen, to be sure its working.
+		viewString = "<table width='100%' border='0' id='rcorners1' cellspacing='0' cellpadding='2px'>";
+		viewString += "<tr><td colspan='11' style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>Current Orders Awaiting Processing</td></tr>";
+		var rowsString = "";
+		for (i = 1; i < rows.length; i++)
+			{
+			viewString += "<tr>";
+			var cols = rows[i].split(",");
+				for (b=0; b < cols.length; b++)
+					{
+					if(b === 0 || b === 1 || b === 2 || b === 3 || b === 4 || b === 5 || b === 6 || b === 7 || b === 8 || b === 9 || b === 24)
+						{
+						if(i > 1 && b === 24)
+							{
+							total = total + Number(cols[b]);
+							}
+						viewString += "<td style='color:#834063;background-color:#FFFFFF;border-top:1px solid #834063;border-right:1px solid #834063'>"+cols[b]+"</td>";
+						}
+					}
+		    viewString += "</tr>";
+			}
+			viewString += "<tr>";
+			viewString += "<td colspan='10' align='right' style='color:#834063;background-color:#FFFFFF;border-top:1px solid #834063;border-right:1px solid #834063'>Total</td>";
+			viewString += "<td style='color:#834063;background-color:#FFFFFF;border-top:1px solid #834063;border-right:1px solid #834063'>"+total.toFixed(2)+"</td>";
+			viewString += "</tr>";
+		viewString += "</table>";
+		//good thats working, know lets split each row into its data elements then build a table using those elements.
+		document.getElementById("result").innerHTML = viewString;
+        x.style.display = 'block';
+	}
+
+function show_getStarted()
+	{
+    var gs = document.getElementById('getStarted');
+    var ma = document.getElementById('myAccount');
+    if (gs.style.display === 'none')
+    	{
+        gs.style.display = 'block';
+        ma.style.display = 'none';
+    	}
+    else
+    	{
+        gs.style.display = 'none';
+    	}
+	}
+function show_myAccount()
+	{
+    var ma = document.getElementById('myAccount');
+    var gs = document.getElementById('getStarted');
+    if (ma.style.display === 'none')
+    	{
+        ma.style.display = 'block';
+        gs.style.display = 'none';
+    	}
+    else
+    	{
+        ma.style.display = 'none';
+    	}
+	}
+function show_dog1()
+	{
+    var d1 = document.getElementById('dog1');
+    if (d1.style.display === 'none')
+    	{d1.style.display = 'block';}
+    else
+    	{d1.style.display = 'none';}
+	}
+function show_dog2()
+	{
+    var d2 = document.getElementById('dog2');
+    if (d2.style.display === 'none')
+    	{d2.style.display = 'block';}
+    else
+    	{d2.style.display = 'none';}
+	}
+function show_dog3()
+	{
+    var d3 = document.getElementById('dog3');
+    if (d3.style.display === 'none')
+    	{d3.style.display = 'block';}
+    else
+    	{d3.style.display = 'none';}
+	}
+function showFirst()
+{
+var ct = document.getElementById('thisInput_13').value;
+if(ct === "VDC" || ct === "VCC")
+	{document.getElementById('thisInput_14').placeholder = "Card Number e.g: 4AAABBBBCCCCDDDD";}
+if(ct === "MDC" || ct === "MCC")
+	{document.getElementById('thisInput_14').placeholder = "Card Number e.g: 5AAABBBBCCCCDDDD";}
+if(ct === "AMEX")
+	{document.getElementById('thisInput_14').placeholder = "Card Number e.g: 3AAABBBBCCCCDDDD";}
+if(ct === "CASH")
+	{document.getElementById('thisInput_14').placeholder = "Please enter value";}
+}
+function checkLength()
+	{
+	var isCash = document.getElementById('thisInput_13').value;
+	var thisCard = document.getElementById('thisInput_14').value;
+	if(isCash !== "CASH" && thisCard.length > 1 && thisCard.length < 16)
+		{
+		alert('Card Number must contain 16 digits');
+		//thisCard.focus();
+		}
+	}
+function adminPanel()
+	{
+	var panel = document.getElementById('admin');
+	var but_A = document.getElementById('adminButtonOPEN');
+	var but_B = document.getElementById('adminButtonCLOSE');
+	if(admin_visible === false)
+		{
+		panel.style.display = "block";
+		admin_visible = true;
+		but_A.style.display = "none";
+		but_B.style.display = "block";
+		viewOrders();
+		}
+	else
+		{
+		panel.style.display = "none";
+		admin_visible = false;
+		but_A.style.display = "block";
+		but_B.style.display = "none";
+		}
+	}
+function setUserLocation()
+	{
+	var tUser = document.getElementById('thisUser').value;
+	var tLoc = document.getElementById('thisLocation').value;
+	localStorage.setItem("userLocation",tUser+","+tLoc);
+	}
+function getUserLocation()
+	{
+ 	var details = localStorage.getItem("userLocation").split(",");
+ 	document.getElementById('thisUser').value = details[0];
+	document.getElementById('thisLocation').value = details[1];
+
+	}
+</script>
+</head>
+<body style='background-color: #935073' onload='getUserLocation();'>
+<!--build a form to allow customer input data-->
+<!--
+the form will need the following elements
+1) First Name
+2) Surname
+3) House Name/Number
+4) Street Name
+5) Village/Town/City
+6) County
+7) Postcode
+8) Phone Number
+9) Email address
+10) Dog Name
+11) Dog Weight
+12) Preferred Flavour
+13) CC Number
+14) Expiry Date
+15) CVV Number
+16) Submit button
+17) Reset Button
+-->
+<table style='width: 100%;border-spacing: 0px;' class='header'>
+	<tr>
+		<td style='font-family:arial;color:#FFFFFF;font-size:26px;' valign='middle' align='right'>
+		<img src='header_logo.png' style='float:left' alt='Header Image'/>Making Pet Owners Lives Easier
+		<div id='status' style='margin-left:30px;float:right;'></div>
+		</td>
+	</tr>
+</table>
+<br />
+<table style='width: 100%; border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
+			<input type='button' title='Watch Video' onClick='show_getStarted();' value='Get Started Video' id='getStartedBut' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		</td>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
+			<input type='button' title='Watch Video' onClick='show_myAccount();' value='My Account Video' id='getStartedBut' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		</td>
+	</tr>
+	<tr>
+		<td align='center' colspan='2'>
+			<div id='getStarted' style='display:none;padding-top: 50px;'>
+			<video style='width: 80%' controls>
+  				<source src="get-started.mp4" type="video/mp4">
+  				<!--<source src="mov_bbb.ogg" type="video/ogg">-->
+  				Your browser does not support HTML5 video.
+			</video>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td align='center' colspan='2'>
+			<div id='myAccount' style='display:none;padding-top: 50px;'>
+			<video style='width: 80%;' controls>
+  				<source src="my-account.mp4" type="video/mp4">
+  				<!--<source src="mov_bbb.ogg" type="video/ogg">-->
+  				Your browser does not support HTML5 video.
+			</video>
+			</div>
+		</td>
+	</tr>
+</table>
+<br /><br />
+<table style='width: 100%;border-spacing: 0px; ' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would like...
+		</td>
+	</tr>
+	<tr>
+		<td style='background-color:#834063;height:30px;' valign='middle' align='center'>
+			<select id='thisInput_00' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+				<option value='MI'>more information</option>
+				<option value='TS' selected>a trial box</option>
+				<option value='2K'>a 2kg bag</option>
+				<option value='FS'>a full subscription</option>
+			</select>
+			<br /><br />
+			<select id='thisInput_20' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+				<option value='TAKE'>to take with me</option>
+				<option value='POST' selected>sent to me</option>
+			</select>
+		</td>
+	</tr>
+</table>
+<br />
+<table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
+		<input type='button' title='parcelpet 1' onClick='show_dog1();' value='Tell us about parcelpet 1' id='dog2But' style='padding:5px;width:87%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id='dog1' style='display:block;'>
+				<table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
+
+					<tr>
+						<td colspan='4' style='background-color:#834063;height:120px' valign='middle' align='center'>
+							<input type='text' id='thisInput_10' placeholder='Dog Name' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+							<select id='weight' onChange='showCost();' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='0'>Select Weight</option>
+								<option value='1'>1 kg</option>
+								<option value='2'>2 kg</option>
+								<option value='3'>3 kg</option>
+								<option value='4'>4 kg</option>
+								<option value='5'>5 kg</option>
+								<option value='6'>6 kg</option>
+								<option value='7'>7 kg</option>
+								<option value='8'>8 kg</option>
+								<option value='9'>9 kg</option>
+								<option value='10'>10 kg</option>
+								<option value='11'>11 kg</option>
+								<option value='12'>12 kg</option>
+								<option value='13'>13 kg</option>
+								<option value='14'>14 kg</option>
+								<option value='15'>15 kg</option>
+								<option value='16'>16 kg</option>
+								<option value='17'>17 kg</option>
+								<option value='18'>18 kg</option>
+								<option value='19'>19 kg</option>
+								<option value='20' selected>20 kg</option>
+								<option value='21'>21 kg</option>
+								<option value='22'>22 kg</option>
+								<option value='23'>23 kg</option>
+								<option value='24'>24 kg</option>
+								<option value='25'>25 kg</option>
+								<option value='26'>26 kg</option>
+								<option value='27'>27 kg</option>
+								<option value='28'>28 kg</option>
+								<option value='29'>29 kg</option>
+								<option value='30'>30 kg</option>
+								<option value='31'>31 kg</option>
+								<option value='32'>32 kg</option>
+								<option value='33'>33 kg</option>
+								<option value='34'>34 kg</option>
+								<option value='35'>35 kg</option>
+								<option value='36'>36 kg</option>
+								<option value='37'>37 kg</option>
+								<option value='38'>38 kg</option>
+								<option value='39'>39 kg</option>
+								<option value='40'>40 kg</option>
+								<option value='41'>41 kg</option>
+								<option value='42'>42 kg</option>
+								<option value='43'>43 kg</option>
+								<option value='44'>44 kg</option>
+								<option value='45'>45 kg</option>
+								<option value='46'>46 kg</option>
+								<option value='47'>47 kg</option>
+								<option value='48'>48 kg</option>
+								<option value='49'>49 kg</option>
+								<option value='50'>50 kg</option>
+								<option value='51'>51 kg</option>
+								<option value='52'>52 kg</option>
+								<option value='53'>53 kg</option>
+								<option value='54'>54 kg</option>
+								<option value='55'>55 kg</option>
+								<option value='56'>56 kg</option>
+								<option value='57'>57 kg</option>
+								<option value='58'>58 kg</option>
+								<option value='59'>59 kg</option>
+								<option value='60'>60 kg</option>
+								<option value='61'>61 kg</option>
+								<option value='62'>62 kg</option>
+								<option value='63'>63 kg</option>
+								<option value='64'>64 kg</option>
+								<option value='65'>65 kg</option>
+								<option value='66'>66 kg</option>
+								<option value='67'>67 kg</option>
+								<option value='68'>68 kg</option>
+								<option value='69'>69 kg</option>
+								<option value='70'>70 kg</option>
+							</select>
+							<br /><br />
+							<select id='thisInput_12' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;' onChange='showCost();'>
+								<option value='CR' selected>Chicken & Rice</option>
+								<option value='LR'>Lamb & Rice</option>
+								<option value='SP'>Salmon & Potato</option>
+							</select>
+							<br /><br />
+						</td>
+					</tr>
+					<tr>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+							Date food will run out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<!--<input type='date' id='thisInput_19' placeholder='Date food will run out' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;-webkit-appearance: none;-moz-appearance: none;border:0px;'/>-->
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_19a' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='01'>01</option>
+								<option value='02'>02</option>
+								<option value='03'>03</option>
+								<option value='04'>04</option>
+								<option value='05'>05</option>
+								<option value='06'>06</option>
+								<option value='07'>07</option>
+								<option value='08'>08</option>
+								<option value='09'>09</option>
+								<option value='10'>10</option>
+								<option value='11'>11</option>
+								<option value='12'>12</option>
+								<option value='13'>13</option>
+								<option value='14'>14</option>
+								<option value='15'>15</option>
+								<option value='16'>16</option>
+								<option value='17'>17</option>
+								<option value='18'>18</option>
+								<option value='19'>19</option>
+								<option value='20'>20</option>
+								<option value='21'>21</option>
+								<option value='22'>22</option>
+								<option value='23'>23</option>
+								<option value='24'>24</option>
+								<option value='25'>25</option>
+								<option value='26'>26</option>
+								<option value='27'>27</option>
+								<option value='28'>28</option>
+								<option value='29'>29</option>
+								<option value='30'>30</option>
+								<option value='31'>31</option>
+							</select>
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_19b' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='01'>January</option>
+								<option value='02'>February</option>
+								<option value='03'>March</option>
+								<option value='04'>April</option>
+								<option value='05'>May</option>
+								<option value='06'>June</option>
+								<option value='07'>July</option>
+								<option value='08'>August</option>
+								<option value='09'>September</option>
+								<option value='10'>October</option>
+								<option value='11'>November</option>
+								<option value='12'>December</option>
+							</select>
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_19c' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='2017' selected>2017</option>
+								<option value='2018'>2018</option>
+							</select>
+						</td>
+					</tr>
+					<tr><td colspan='4'>&nbsp;</td></tr>
+					<tr>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='fAmt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: 257g</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='dAmt'>Daily cost: &pound;0.86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='wAmt'>Weekly cost: &pound;6.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='mAmt'>Monthly cost: &pound;25.69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+					</tr>
+
+					<tr><td colspan='4'>&nbsp;</td></tr><tr><td colspan='4'>&nbsp;</td></tr>
+					<tr>
+						<td colspan='4' style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:38px;width:25%' valign='middle' align='center'>
+							<div id='pSched'>Your Personalised Schedule is 1 bag every 43 days</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
+		<input type='button' title='parcelpet 2' onClick='show_dog2();' value='Tell us about parcelpet 2' id='dog2But' style='padding:5px;width:87%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id='dog2' style='display:none;'>
+				<table width='100%' cellspacing='0' class='rcorners1'>
+					<tr>
+						<td colspan='4' style='background-color:#834063;height:120px' valign='middle' align='center'>
+							<input type='text' id='thisInput_210' placeholder='Dog Name' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+							<select id='weight2' onChange='showCost2();' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='0'>Select Weight</option>
+								<option value='1'>1 kg</option>
+								<option value='2'>2 kg</option>
+								<option value='3'>3 kg</option>
+								<option value='4'>4 kg</option>
+								<option value='5'>5 kg</option>
+								<option value='6'>6 kg</option>
+								<option value='7'>7 kg</option>
+								<option value='8'>8 kg</option>
+								<option value='9'>9 kg</option>
+								<option value='10'>10 kg</option>
+								<option value='11'>11 kg</option>
+								<option value='12'>12 kg</option>
+								<option value='13'>13 kg</option>
+								<option value='14'>14 kg</option>
+								<option value='15'>15 kg</option>
+								<option value='16'>16 kg</option>
+								<option value='17'>17 kg</option>
+								<option value='18'>18 kg</option>
+								<option value='19'>19 kg</option>
+								<option value='20' selected>20 kg</option>
+								<option value='21'>21 kg</option>
+								<option value='22'>22 kg</option>
+								<option value='23'>23 kg</option>
+								<option value='24'>24 kg</option>
+								<option value='25'>25 kg</option>
+								<option value='26'>26 kg</option>
+								<option value='27'>27 kg</option>
+								<option value='28'>28 kg</option>
+								<option value='29'>29 kg</option>
+								<option value='30'>30 kg</option>
+								<option value='31'>31 kg</option>
+								<option value='32'>32 kg</option>
+								<option value='33'>33 kg</option>
+								<option value='34'>34 kg</option>
+								<option value='35'>35 kg</option>
+								<option value='36'>36 kg</option>
+								<option value='37'>37 kg</option>
+								<option value='38'>38 kg</option>
+								<option value='39'>39 kg</option>
+								<option value='40'>40 kg</option>
+								<option value='41'>41 kg</option>
+								<option value='42'>42 kg</option>
+								<option value='43'>43 kg</option>
+								<option value='44'>44 kg</option>
+								<option value='45'>45 kg</option>
+								<option value='46'>46 kg</option>
+								<option value='47'>47 kg</option>
+								<option value='48'>48 kg</option>
+								<option value='49'>49 kg</option>
+								<option value='50'>50 kg</option>
+								<option value='51'>51 kg</option>
+								<option value='52'>52 kg</option>
+								<option value='53'>53 kg</option>
+								<option value='54'>54 kg</option>
+								<option value='55'>55 kg</option>
+								<option value='56'>56 kg</option>
+								<option value='57'>57 kg</option>
+								<option value='58'>58 kg</option>
+								<option value='59'>59 kg</option>
+								<option value='60'>60 kg</option>
+								<option value='61'>61 kg</option>
+								<option value='62'>62 kg</option>
+								<option value='63'>63 kg</option>
+								<option value='64'>64 kg</option>
+								<option value='65'>65 kg</option>
+								<option value='66'>66 kg</option>
+								<option value='67'>67 kg</option>
+								<option value='68'>68 kg</option>
+								<option value='69'>69 kg</option>
+								<option value='70'>70 kg</option>
+							</select>
+							<br /><br />
+							<select id='thisInput_212' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;' onChange='showCost2();'>
+								<option value='CR' selected>Chicken & Rice</option>
+								<option value='LR'>Lamb & Rice</option>
+								<option value='SP'>Salmon & Potato</option>
+							</select>
+							<br /><br />
+						</td>
+					</tr>
+					<tr>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+							Date food will run out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<!--<input type='date' id='thisInput_119' placeholder='Date food will run out' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;-webkit-appearance: none;-moz-appearance: none;border:0px;'/>-->
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_219a' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='01'>01</option>
+								<option value='02'>02</option>
+								<option value='03'>03</option>
+								<option value='04'>04</option>
+								<option value='05'>05</option>
+								<option value='06'>06</option>
+								<option value='07'>07</option>
+								<option value='08'>08</option>
+								<option value='09'>09</option>
+								<option value='10'>10</option>
+								<option value='11'>11</option>
+								<option value='12'>12</option>
+								<option value='13'>13</option>
+								<option value='14'>14</option>
+								<option value='15'>15</option>
+								<option value='16'>16</option>
+								<option value='17'>17</option>
+								<option value='18'>18</option>
+								<option value='19'>19</option>
+								<option value='20'>20</option>
+								<option value='21'>21</option>
+								<option value='22'>22</option>
+								<option value='23'>23</option>
+								<option value='24'>24</option>
+								<option value='25'>25</option>
+								<option value='26'>26</option>
+								<option value='27'>27</option>
+								<option value='28'>28</option>
+								<option value='29'>29</option>
+								<option value='30'>30</option>
+								<option value='31'>31</option>
+							</select>
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_219b' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='01'>January</option>
+								<option value='02'>February</option>
+								<option value='03'>March</option>
+								<option value='04'>April</option>
+								<option value='05'>May</option>
+								<option value='06'>June</option>
+								<option value='07'>July</option>
+								<option value='08'>August</option>
+								<option value='09'>September</option>
+								<option value='10'>October</option>
+								<option value='11'>November</option>
+								<option value='12'>December</option>
+							</select>
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_219c' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='2017' selected>2017</option>
+								<option value='2018'>2018</option>
+							</select>
+						</td>
+					</tr>
+					<tr><td colspan='4'>&nbsp;</td></tr>
+					<tr>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='fAmt2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: 257g</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='dAmt2'>Daily cost: &pound;0.86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='wAmt2'>Weekly cost: &pound;6.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='mAmt2'>Monthly cost: &pound;25.69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+					</tr>
+
+					<tr><td colspan='4'>&nbsp;</td></tr><tr><td colspan='4'>&nbsp;</td></tr>
+					<tr>
+						<td colspan='4' style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:38px;width:25%' valign='middle' align='center'>
+							<div id='pSched2'>Your Personalised Schedule is 1 bag every 43 days</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
+		<input type='button' title='parcelpet 3' onClick='show_dog3();' value='Tell us about parcelpet 3' id='dog2But' style='padding:5px;width:87%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id='dog3' style='display:none;'>
+				<table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
+
+					<tr>
+						<td colspan='4' style='background-color:#834063;height:120px' valign='middle' align='center'>
+							<input type='text' id='thisInput_310' placeholder='Dog Name' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+							<select id='weight3' onChange='showCost3();' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='0'>Select Weight</option>
+								<option value='1'>1 kg</option>
+								<option value='2'>2 kg</option>
+								<option value='3'>3 kg</option>
+								<option value='4'>4 kg</option>
+								<option value='5'>5 kg</option>
+								<option value='6'>6 kg</option>
+								<option value='7'>7 kg</option>
+								<option value='8'>8 kg</option>
+								<option value='9'>9 kg</option>
+								<option value='10'>10 kg</option>
+								<option value='11'>11 kg</option>
+								<option value='12'>12 kg</option>
+								<option value='13'>13 kg</option>
+								<option value='14'>14 kg</option>
+								<option value='15'>15 kg</option>
+								<option value='16'>16 kg</option>
+								<option value='17'>17 kg</option>
+								<option value='18'>18 kg</option>
+								<option value='19'>19 kg</option>
+								<option value='20' selected>20 kg</option>
+								<option value='21'>21 kg</option>
+								<option value='22'>22 kg</option>
+								<option value='23'>23 kg</option>
+								<option value='24'>24 kg</option>
+								<option value='25'>25 kg</option>
+								<option value='26'>26 kg</option>
+								<option value='27'>27 kg</option>
+								<option value='28'>28 kg</option>
+								<option value='29'>29 kg</option>
+								<option value='30'>30 kg</option>
+								<option value='31'>31 kg</option>
+								<option value='32'>32 kg</option>
+								<option value='33'>33 kg</option>
+								<option value='34'>34 kg</option>
+								<option value='35'>35 kg</option>
+								<option value='36'>36 kg</option>
+								<option value='37'>37 kg</option>
+								<option value='38'>38 kg</option>
+								<option value='39'>39 kg</option>
+								<option value='40'>40 kg</option>
+								<option value='41'>41 kg</option>
+								<option value='42'>42 kg</option>
+								<option value='43'>43 kg</option>
+								<option value='44'>44 kg</option>
+								<option value='45'>45 kg</option>
+								<option value='46'>46 kg</option>
+								<option value='47'>47 kg</option>
+								<option value='48'>48 kg</option>
+								<option value='49'>49 kg</option>
+								<option value='50'>50 kg</option>
+								<option value='51'>51 kg</option>
+								<option value='52'>52 kg</option>
+								<option value='53'>53 kg</option>
+								<option value='54'>54 kg</option>
+								<option value='55'>55 kg</option>
+								<option value='56'>56 kg</option>
+								<option value='57'>57 kg</option>
+								<option value='58'>58 kg</option>
+								<option value='59'>59 kg</option>
+								<option value='60'>60 kg</option>
+								<option value='61'>61 kg</option>
+								<option value='62'>62 kg</option>
+								<option value='63'>63 kg</option>
+								<option value='64'>64 kg</option>
+								<option value='65'>65 kg</option>
+								<option value='66'>66 kg</option>
+								<option value='67'>67 kg</option>
+								<option value='68'>68 kg</option>
+								<option value='69'>69 kg</option>
+								<option value='70'>70 kg</option>
+							</select>
+							<br /><br />
+							<select id='thisInput_312' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;' onChange='showCost3();'>
+								<option value='CR' selected>Chicken & Rice</option>
+								<option value='LR'>Lamb & Rice</option>
+								<option value='SP'>Salmon & Potato</option>
+							</select>
+							<br /><br />
+						</td>
+					</tr>
+					<tr>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+							Date food will run out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<!--<input type='date' id='thisInput_319' placeholder='Date food will run out' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;-webkit-appearance: none;-moz-appearance: none;border:0px;'/>-->
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_319a' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;'>
+								<option value='01'>01</option>
+								<option value='02'>02</option>
+								<option value='03'>03</option>
+								<option value='04'>04</option>
+								<option value='05'>05</option>
+								<option value='06'>06</option>
+								<option value='07'>07</option>
+								<option value='08'>08</option>
+								<option value='09'>09</option>
+								<option value='10'>10</option>
+								<option value='11'>11</option>
+								<option value='12'>12</option>
+								<option value='13'>13</option>
+								<option value='14'>14</option>
+								<option value='15'>15</option>
+								<option value='16'>16</option>
+								<option value='17'>17</option>
+								<option value='18'>18</option>
+								<option value='19'>19</option>
+								<option value='20'>20</option>
+								<option value='21'>21</option>
+								<option value='22'>22</option>
+								<option value='23'>23</option>
+								<option value='24'>24</option>
+								<option value='25'>25</option>
+								<option value='26'>26</option>
+								<option value='27'>27</option>
+								<option value='28'>28</option>
+								<option value='29'>29</option>
+								<option value='30'>30</option>
+								<option value='31'>31</option>
+							</select>
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_319b' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='01'>January</option>
+								<option value='02'>February</option>
+								<option value='03'>March</option>
+								<option value='04'>April</option>
+								<option value='05'>May</option>
+								<option value='06'>June</option>
+								<option value='07'>July</option>
+								<option value='08'>August</option>
+								<option value='09'>September</option>
+								<option value='10'>October</option>
+								<option value='11'>November</option>
+								<option value='12'>December</option>
+							</select>
+						</td>
+						<td style='background-color:#834063;height:120px' valign='middle' align='left'>
+							<select id='thisInput_319c' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+								<option value='2017' selected>2017</option>
+								<option value='2018'>2018</option>
+							</select>
+						</td>
+					</tr>
+					<tr><td colspan='4'>&nbsp;</td></tr>
+					<tr>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='fAmt3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Daily Amount: 257g</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='dAmt3'>Daily cost: &pound;0.86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='wAmt3'>Weekly cost: &pound;6.00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+						<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:25%' valign='middle' align='center'>
+						<div id='mAmt3'>Monthly cost: &pound;25.69&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+						</td>
+					</tr>
+
+					<tr><td colspan='4'>&nbsp;</td></tr><tr><td colspan='4'>&nbsp;</td></tr>
+					<tr>
+						<td colspan='4' style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:38px;width:25%' valign='middle' align='center'>
+							<div id='pSched3'>Your Personalised Schedule is 1 bag every 43 days</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</td>
+	</tr>
+
+
+</table>
+<br />
+<table style='width:100%;border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tell us about you...
+		</td>
+	</tr>
+	<tr>
+		<td style='background-color:#834063;height:120px' valign='middle' align='center'>
+			<input type='text' id='thisInput_01' placeholder='Firstname' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='text' id='thisInput_02' placeholder='Surname' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='number' id='thisInput_08' placeholder='Phone Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='email' id='thisInput_09' placeholder='Email Address' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+		</td>
+	</tr>
+</table>
+<br />
+<table style='width:100%;border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where would you like your food delivering to?
+		</td>
+	</tr>
+	<tr>
+		<td style='background-color:#834063;height:150px' valign='middle' align='center'>
+			<input type='text' id='thisInput_03' placeholder='House Name / Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='text' id='thisInput_04' placeholder='Street' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='text' id='thisInput_05' placeholder='Village/Town/City' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='text' id='thisInput_06' placeholder='County' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='text' id='thisInput_07' placeholder='Postcode' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+			<input type='text' id='thisInput_17' placeholder='Special Delivery Instructions' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+		</td>
+	</tr>
+</table>
+<br />
+<table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td colspan='3' style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How would you like to pay?
+		</td>
+	</tr>
+	<tr>
+		<td colspan='3' style='background-color:#834063;height:120px' valign='middle' align='center'>
+			<select id='thisInput_13' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;' onchange='showFirst();'>
+				<option value='VDC'>Visa Debit Card</option>
+				<option value='VCC'>Visa Credit Card</option>
+				<option value='MDC'>Mastercard Debit Card</option>
+				<option value='MCC'>Mastercard Credit Card</option>
+				<option value='AMEX'>American Express</option>
+				<option value='CASH'>Cash</option>
+			</select>
+			<br /><br />
+			<input type='number' id='thisInput_14' placeholder='Card Number e.g: 4AAABBBBCCCCDDDD' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;' onblur='checkLength();'/><br /><br />
+		</td>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:33%' valign='middle' align='left'>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expiry Date
+		</td>
+		<td style='background-color:#834063;height:120px;width:33%;' valign='middle' align='left'>
+			<select id='thisInput_15a' style='padding:5px;width:85%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+				<option value='01'>01</option>
+				<option value='02'>02</option>
+				<option value='03'>03</option>
+				<option value='04'>04</option>
+				<option value='05'>05</option>
+				<option value='06'>06</option>
+				<option value='07'>07</option>
+				<option value='08'>08</option>
+				<option value='09'>09</option>
+				<option value='10'>10</option>
+				<option value='11'>11</option>
+				<option value='12'>12</option>
+			</select>
+		</td>
+		<td style='background-color:#834063;height:120px;width:33%;' valign='middle' align='left'>
+			<select id='thisInput_15b' style='padding:5px;width:85%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+				<option value='2017'>2017</option>
+				<option value='2018'>2018</option>
+				<option value='2019'>2019</option>
+				<option value='2020'>2020</option>
+				<option value='2021'>2021</option>
+				<option value='2022'>2022</option>
+				<option value='2023'>2023</option>
+				<option value='2024'>2024</option>
+				<option value='2025'>2025</option>
+				<option value='2026'>2026</option>
+				<option value='2027'>2027</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td colspan='3' style='background-color:#834063;height:120px' valign='middle' align='center'>
+			<input type='number' id='thisInput_16' placeholder='CVV2 Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+		</td>
+	</tr>
+</table>
+<br />
+<table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:33%' valign='middle' align='left'>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes
+		</td>
+	</tr>
+	<tr>
+		<td style='background-color:#834063;height:30px' valign='middle' align='center'>
+			<label for='thisInput_21'>
+			<textarea id='thisInput_21' name='thisInput_21' style='padding:5px;width:90%;border-radius: 25px;height:200px;color:#834063;font-size:18px;border:0px;'></textarea>
+		</td>
+	</tr>
+</table>
+<br />
+<table style='width:100%; border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px' valign='middle' align='center'>
+			<input type='button' onClick='storeData();checkConnection();' title='Add to orders awaiting processing' value='Add Order' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		</td>
+	</tr>
+</table>
+<br />
+<table style='width:100%;border-spacing: 0px;' id='header'>
+	<tr>
+		<td width='33%'>&nbsp;</td>
+		<td style='font-family:arial;color:#FFFFFF;font-size:16px;' valign='middle'>
+			<center>&copy 2017 parcelpet Ltd</center>
+		</td>
+		<td width='33%' align='right'>
+			<div id='adminButtonOPEN'>
+				<input id='admin_button' type='button' style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' title='Show Admin Functions' onClick='adminPanel();' value='&#10557;'>
+			</div>
+			<div id='adminButtonCLOSE' style='display: none;'>
+				<input id='admin_button' type='button' style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' title='Hide Admin Functions' onClick='adminPanel();' value='&#10556;'>
+			</div>
+		</td>
+	</tr>
+</table>
+<div id='admin' style='display:none'>
+<div id="result" style='font-family:arial;margin-top:30px;'>Please Initialise</div>
+<br /><br />
+<table style='width:100%;border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
+			<input type='text' id='thisUser' placeholder='Team Member' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
+		</td>
+		<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
+			<input type='text' id='thisLocation' placeholder='Enter Location' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
+		</td>
+		<td style='background-color:#834063;height:30px;' valign='middle' align='center'>
+			<input style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' type='button' onclick='setUserLocation();' title='Save Details' value='&#43;'/>
+		</td>
+	</tr>
+</table>
+<br /><br />
+<table style='width:100%;border-spacing: 0px;' class='rcorners1'>
+	<tr>
+		<td style='background-color:#834063;height:40px;width:50%;' valign='middle' align='center'>
+			<input type='button' title='Clear and initialise system' onClick='resetData();' value='Initialise Order System' id='startBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+			</td>
+		<td style='background-color:#834063;height:30px;width:50%;' valign='middle' align='center'>
+			<form name='orders' id='orders' method='POST' action='http://mobile.insidetrackmedia.co.uk/EOS_R.php' target='blank'>
+			<input type='hidden' name='sendOrder' id='sendOrder'>
+			<input type='submit' title='Send orders for processing' onClick='sendOrders();' value='Process Outstanding Orders' id='sendBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+			</form>
+		</td>
+	</tr>
+</table>
+</div>
+<script type='text/javascript'>
+//might as well use this container for sending the data to the server
+document.getElementById("sendOrder").value = localStorage.getItem("offlineOrders");
+setInterval(checkConnection, 60000);
+function checkConnection()
+	{
+	if(navigator.onLine)
+		{
+		document.getElementById('sendBut').disabled = false;
+		document.getElementById('sendBut').style.color = "#834063";
+		document.getElementById('status').innerHTML = "<div style='width:16px;height:16px;border-radius:50%;background-color:#00FF00'></div>";
+		//document.getElementById('orders').submit();
+		}
+	else
+		{
+		document.getElementById('sendBut').disabled = true;
+		document.getElementById('sendBut').style.color = "#C0C0C0";
+		document.getElementById('status').innerHTML = "<div style='width:16px;height:16px;border-radius:50%;background-color:#FF0000'></div>";
+		}
+	}
+//if offline, disable the Process Outstanding Orders button
+if(navigator.onLine)
+	{
+	document.getElementById('sendBut').disabled = false;
+	document.getElementById('sendBut').style.color = "#834063";
+	document.getElementById('status').innerHTML = "<div style='width:16px;height:16px;border-radius:50%;background-color:#00FF00'></div>";
+	}
+else
+	{
+	document.getElementById('sendBut').disabled = true;
+	document.getElementById('sendBut').style.color = "#C0C0C0";
+	document.getElementById('status').innerHTML = "<div style='width:16px;height:16px;border-radius:50%;background-color:#FF0000'></div>";
+	}
+function logEvent(event)
+	{
+    console.log(event.type);
+    }
+    window.applicationCache.addEventListener('checking',logEvent,false);
+    window.applicationCache.addEventListener('noupdate',logEvent,false);
+    window.applicationCache.addEventListener('downloading',logEvent,false);
+    window.applicationCache.addEventListener('cached',logEvent,false);
+    window.applicationCache.addEventListener('updateready',logEvent,false);
+    window.applicationCache.addEventListener('obsolete',logEvent,false);
+    window.applicationCache.addEventListener('error',logEvent,false);
+</script>
+</body>
+</html>
