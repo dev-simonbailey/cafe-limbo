@@ -827,90 +827,69 @@ function getUserLocation()
 </script>
 </head>
 <body style='background-color: #935073' onload='getUserLocation();'>
-<!--build a form to allow customer input data-->
-<!--
-the form will need the following elements
-1) First Name
-2) Surname
-3) House Name/Number
-4) Street Name
-5) Village/Town/City
-6) County
-7) Postcode
-8) Phone Number
-9) Email address
-10) Dog Name
-11) Dog Weight
-12) Preferred Flavour
-13) CC Number
-14) Expiry Date
-15) CVV Number
-16) Submit button
-17) Reset Button
--->
 <table style='width: 100%;border-spacing: 0px;' class='header'>
-	<tr>
-		<td style='font-family:arial;color:#FFFFFF;font-size:26px;' valign='middle' align='right'>
-		<img src='header_logo.png' style='float:left' alt='Header Image'/>Making Pet Owners Lives Easier
-		<div id='status' style='margin-left:30px;float:right;'></div>
-		</td>
-	</tr>
+    <tr>
+        <td style='font-family:arial;color:#FFFFFF;font-size:26px;' valign='middle' align='right'>
+            <img src='header_logo.png' style='float:left' alt='Header Image'/>Making Pet Owners Lives Easier
+            <div id='status' style='margin-left:30px;float:right;'></div>
+	</td>
+    </tr>
 </table>
 <br />
 <table style='width: 100%; border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
-			<input type='button' title='Watch Video' onClick='show_getStarted();' value='Get Started Video' id='getStartedBut' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-		</td>
-		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
-			<input type='button' title='Watch Video' onClick='show_myAccount();' value='My Account Video' id='getStartedBut' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-		</td>
-	</tr>
-	<tr>
-		<td align='center' colspan='2'>
-			<div id='getStarted' style='display:none;padding-top: 50px;'>
-			<video style='width: 80%' controls>
-  				<source src="get-started.mp4" type="video/mp4">
-  				<!--<source src="mov_bbb.ogg" type="video/ogg">-->
-  				Your browser does not support HTML5 video.
-			</video>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td align='center' colspan='2'>
-			<div id='myAccount' style='display:none;padding-top: 50px;'>
-			<video style='width: 80%;' controls>
-  				<source src="my-account.mp4" type="video/mp4">
-  				<!--<source src="mov_bbb.ogg" type="video/ogg">-->
-  				Your browser does not support HTML5 video.
-			</video>
-			</div>
-		</td>
-	</tr>
+    <tr>
+        <td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
+            <input type='button' title='Watch Video' onClick='show_getStarted();' value='Get Started Video' id='getStartedBut' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+        </td>
+	<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='center'>
+            <input type='button' title='Watch Video' onClick='show_myAccount();' value='My Account Video' id='getStartedBut' style='padding:5px;width:80%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+	</td>
+    </tr>
+    <tr>
+	<td align='center' colspan='2'>
+            <div id='getStarted' style='display:none;padding-top: 50px;'>
+                <video style='width: 80%' controls>
+                    <source src="get-started.mp4" type="video/mp4">
+                    <!--<source src="mov_bbb.ogg" type="video/ogg">-->
+                    Your browser does not support HTML5 video.
+		</video>
+            </div>
+        </td>
+    </tr>
+    <tr>
+	<td align='center' colspan='2'>
+            <div id='myAccount' style='display:none;padding-top: 50px;'>
+		<video style='width: 80%;' controls>
+                    <source src="my-account.mp4" type="video/mp4">
+                    <!--<source src="mov_bbb.ogg" type="video/ogg">-->
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+	</td>
+    </tr>
 </table>
 <br /><br />
 <table style='width: 100%;border-spacing: 0px; ' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would like...
-		</td>
-	</tr>
-	<tr>
-		<td style='background-color:#834063;height:30px;' valign='middle' align='center'>
-			<select id='thisInput_00' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-				<option value='MI'>more information</option>
-				<option value='TS' selected>a trial box</option>
-				<option value='2K'>a 2kg bag</option>
-				<option value='FS'>a full subscription</option>
-			</select>
-			<br /><br />
-			<select id='thisInput_20' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-				<option value='TAKE'>to take with me</option>
-				<option value='POST' selected>sent to me</option>
-			</select>
-		</td>
-	</tr>
+    <tr>
+	<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I would like...
+	</td>
+    </tr>
+    <tr>
+	<td style='background-color:#834063;height:30px;' valign='middle' align='center'>
+            <select id='thisInput_00' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		<option value='MI'>more information</option>
+		<option value='TS' selected>a trial box</option>
+		<option value='2K'>a 2kg bag</option>
+		<option value='FS'>a full subscription</option>
+            </select>
+            <br /><br />
+            <select id='thisInput_20' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		<option value='TAKE'>to take with me</option>
+		<option value='POST' selected>sent to me</option>
+            </select>
+	</td>
+    </tr>
 </table>
 <br />
 <table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
@@ -1469,168 +1448,168 @@ the form will need the following elements
 </table>
 <br />
 <table style='width:100%;border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tell us about you...
-		</td>
-	</tr>
-	<tr>
-		<td style='background-color:#834063;height:120px' valign='middle' align='center'>
-			<input type='text' id='thisInput_01' placeholder='Firstname' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='text' id='thisInput_02' placeholder='Surname' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='number' id='thisInput_08' placeholder='Phone Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='email' id='thisInput_09' placeholder='Email Address' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-		</td>
-	</tr>
+    <tr>
+	<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tell us about you...
+	</td>
+    </tr>
+    <tr>
+	<td style='background-color:#834063;height:120px' valign='middle' align='center'>
+            <input type='text' id='thisInput_01' placeholder='Firstname' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='text' id='thisInput_02' placeholder='Surname' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='number' id='thisInput_08' placeholder='Phone Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='email' id='thisInput_09' placeholder='Email Address' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+	</td>
+    </tr>
 </table>
 <br />
 <table style='width:100%;border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where would you like your food delivering to?
-		</td>
-	</tr>
-	<tr>
-		<td style='background-color:#834063;height:150px' valign='middle' align='center'>
-			<input type='text' id='thisInput_03' placeholder='House Name / Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='text' id='thisInput_04' placeholder='Street' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='text' id='thisInput_05' placeholder='Village/Town/City' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='text' id='thisInput_06' placeholder='County' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='text' id='thisInput_07' placeholder='Postcode' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-			<input type='text' id='thisInput_17' placeholder='Special Delivery Instructions' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-		</td>
-	</tr>
+    <tr>
+	<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Where would you like your food delivering to?
+	</td>
+    </tr>
+    <tr>
+	<td style='background-color:#834063;height:150px' valign='middle' align='center'>
+            <input type='text' id='thisInput_03' placeholder='House Name / Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='text' id='thisInput_04' placeholder='Street' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='text' id='thisInput_05' placeholder='Village/Town/City' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='text' id='thisInput_06' placeholder='County' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='text' id='thisInput_07' placeholder='Postcode' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+            <input type='text' id='thisInput_17' placeholder='Special Delivery Instructions' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+	</td>
+    </tr>
 </table>
 <br />
 <table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td colspan='3' style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How would you like to pay?
-		</td>
-	</tr>
-	<tr>
-		<td colspan='3' style='background-color:#834063;height:120px' valign='middle' align='center'>
-			<select id='thisInput_13' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;' onchange='showFirst();'>
-				<option value='VDC'>Visa Debit Card</option>
-				<option value='VCC'>Visa Credit Card</option>
-				<option value='MDC'>Mastercard Debit Card</option>
-				<option value='MCC'>Mastercard Credit Card</option>
-				<option value='AMEX'>American Express</option>
-				<option value='CASH'>Cash</option>
-			</select>
-			<br /><br />
-			<input type='number' id='thisInput_14' placeholder='Card Number e.g: 4AAABBBBCCCCDDDD' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;' onblur='checkLength();'/><br /><br />
-		</td>
-	<tr>
-		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:33%' valign='middle' align='left'>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expiry Date
-		</td>
-		<td style='background-color:#834063;height:120px;width:33%;' valign='middle' align='left'>
-			<select id='thisInput_15a' style='padding:5px;width:85%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-				<option value='01'>01</option>
-				<option value='02'>02</option>
-				<option value='03'>03</option>
-				<option value='04'>04</option>
-				<option value='05'>05</option>
-				<option value='06'>06</option>
-				<option value='07'>07</option>
-				<option value='08'>08</option>
-				<option value='09'>09</option>
-				<option value='10'>10</option>
-				<option value='11'>11</option>
-				<option value='12'>12</option>
-			</select>
-		</td>
-		<td style='background-color:#834063;height:120px;width:33%;' valign='middle' align='left'>
-			<select id='thisInput_15b' style='padding:5px;width:85%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-				<option value='2017'>2017</option>
-				<option value='2018'>2018</option>
-				<option value='2019'>2019</option>
-				<option value='2020'>2020</option>
-				<option value='2021'>2021</option>
-				<option value='2022'>2022</option>
-				<option value='2023'>2023</option>
-				<option value='2024'>2024</option>
-				<option value='2025'>2025</option>
-				<option value='2026'>2026</option>
-				<option value='2027'>2027</option>
-			</select>
-		</td>
-	</tr>
-	<tr>
-		<td colspan='3' style='background-color:#834063;height:120px' valign='middle' align='center'>
-			<input type='number' id='thisInput_16' placeholder='CVV2 Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-		</td>
-	</tr>
+    <tr>
+	<td colspan='3' style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;' valign='middle' align='left'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How would you like to pay?
+	</td>
+    </tr>
+    <tr>
+	<td colspan='3' style='background-color:#834063;height:120px' valign='middle' align='center'>
+            <select id='thisInput_13' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;' onchange='showFirst();'>
+		<option value='VDC'>Visa Debit Card</option>
+		<option value='VCC'>Visa Credit Card</option>
+		<option value='MDC'>Mastercard Debit Card</option>
+		<option value='MCC'>Mastercard Credit Card</option>
+		<option value='AMEX'>American Express</option>
+		<option value='CASH'>Cash</option>
+            </select>
+            <br /><br />
+            <input type='number' id='thisInput_14' placeholder='Card Number e.g: 4AAABBBBCCCCDDDD' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;' onblur='checkLength();'/><br /><br />
+	</td>
+    <tr>
+	<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:33%' valign='middle' align='left'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expiry Date
+	</td>
+	<td style='background-color:#834063;height:120px;width:33%;' valign='middle' align='left'>
+            <select id='thisInput_15a' style='padding:5px;width:85%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+                <option value='01'>01</option>
+		<option value='02'>02</option>
+		<option value='03'>03</option>
+		<option value='04'>04</option>
+		<option value='05'>05</option>
+		<option value='06'>06</option>
+		<option value='07'>07</option>
+		<option value='08'>08</option>
+		<option value='09'>09</option>
+		<option value='10'>10</option>
+		<option value='11'>11</option>
+		<option value='12'>12</option>
+            </select>
+	</td>
+	<td style='background-color:#834063;height:120px;width:33%;' valign='middle' align='left'>
+            <select id='thisInput_15b' style='padding:5px;width:85%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+		<option value='2017'>2017</option>
+		<option value='2018'>2018</option>
+		<option value='2019'>2019</option>
+		<option value='2020'>2020</option>
+		<option value='2021'>2021</option>
+		<option value='2022'>2022</option>
+		<option value='2023'>2023</option>
+		<option value='2024'>2024</option>
+		<option value='2025'>2025</option>
+		<option value='2026'>2026</option>
+		<option value='2027'>2027</option>
+            </select>
+	</td>
+    </tr>
+    <tr>
+	<td colspan='3' style='background-color:#834063;height:120px' valign='middle' align='center'>
+            <input type='number' id='thisInput_16' placeholder='CVV2 Number' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+	</td>
+    </tr>
 </table>
 <br />
 <table style='width: 100%;border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:33%' valign='middle' align='left'>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes
-		</td>
-	</tr>
-	<tr>
-		<td style='background-color:#834063;height:30px' valign='middle' align='center'>
-			<label for='thisInput_21'>
-			<textarea id='thisInput_21' name='thisInput_21' style='padding:5px;width:90%;border-radius: 25px;height:200px;color:#834063;font-size:18px;border:0px;'></textarea>
-		</td>
-	</tr>
+    <tr>
+	<td style='background-color:#834063;height:30px;font-family:arial;color:#FFFFFF;font-size:22px;width:33%' valign='middle' align='left'>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notes
+        </td>
+    </tr>
+    <tr>
+        <td style='background-color:#834063;height:30px' valign='middle' align='center'>
+            <label for='thisInput_21'>
+            <textarea id='thisInput_21' name='thisInput_21' style='padding:5px;width:90%;border-radius: 25px;height:200px;color:#834063;font-size:18px;border:0px;'></textarea>
+	</td>
+    </tr>
 </table>
 <br />
 <table style='width:100%; border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:30px' valign='middle' align='center'>
-			<input type='button' onClick='storeData();checkConnection();' title='Add to orders awaiting processing' value='Add Order' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-		</td>
-	</tr>
+    <tr>
+	<td style='background-color:#834063;height:30px' valign='middle' align='center'>
+            <input type='button' onClick='storeData();checkConnection();' title='Add to orders awaiting processing' value='Add Order' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+	</td>
+    </tr>
 </table>
 <br />
 <table style='width:100%;border-spacing: 0px;' id='header'>
-	<tr>
-		<td width='33%'>&nbsp;</td>
-		<td style='font-family:arial;color:#FFFFFF;font-size:16px;' valign='middle'>
-			<center>&copy 2017 parcelpet Ltd</center>
-		</td>
-		<td width='33%' align='right'>
-			<div id='adminButtonOPEN'>
-				<input id='admin_button' type='button' style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' title='Show Admin Functions' onClick='adminPanel();' value='&#10557;'>
-			</div>
-			<div id='adminButtonCLOSE' style='display: none;'>
-				<input id='admin_button' type='button' style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' title='Hide Admin Functions' onClick='adminPanel();' value='&#10556;'>
-			</div>
-		</td>
-	</tr>
+    <tr>
+	<td width='33%'>&nbsp;</td>
+	<td style='font-family:arial;color:#FFFFFF;font-size:16px;' valign='middle'>
+            <center>&copy 2017 parcelpet Ltd</center>
+	</td>
+	<td width='33%' align='right'>
+            <div id='adminButtonOPEN'>
+		<input id='admin_button' type='button' style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' title='Show Admin Functions' onClick='adminPanel();' value='&#10557;'>
+            </div>
+            <div id='adminButtonCLOSE' style='display: none;'>
+		<input id='admin_button' type='button' style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' title='Hide Admin Functions' onClick='adminPanel();' value='&#10556;'>
+            </div>
+	</td>
+    </tr>
 </table>
 <div id='admin' style='display:none'>
 <div id="result" style='font-family:arial;margin-top:30px;'>Please Initialise</div>
 <br /><br />
 <table style='width:100%;border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
-			<input type='text' id='thisUser' placeholder='Team Member' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
-		</td>
-		<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
-			<input type='text' id='thisLocation' placeholder='Enter Location' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
-		</td>
-		<td style='background-color:#834063;height:30px;' valign='middle' align='center'>
-			<input style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' type='button' onclick='setUserLocation();' title='Save Details' value='&#43;'/>
-		</td>
-	</tr>
+    <tr>
+	<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
+            <input type='text' id='thisUser' placeholder='Team Member' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
+	</td>
+	<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
+            <input type='text' id='thisLocation' placeholder='Enter Location' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
+        </td>
+	<td style='background-color:#834063;height:30px;' valign='middle' align='center'>
+            <input style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' type='button' onclick='setUserLocation();' title='Save Details' value='&#43;'/>
+	</td>
+    </tr>
 </table>
 <br /><br />
 <table style='width:100%;border-spacing: 0px;' class='rcorners1'>
-	<tr>
-		<td style='background-color:#834063;height:40px;width:50%;' valign='middle' align='center'>
-			<input type='button' title='Clear and initialise system' onClick='resetData();' value='Initialise Order System' id='startBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-			</td>
-		<td style='background-color:#834063;height:30px;width:50%;' valign='middle' align='center'>
-			<form name='orders' id='orders' method='POST' action='http://mobile.insidetrackmedia.co.uk/EOS_R.php' target='blank'>
-			<input type='hidden' name='sendOrder' id='sendOrder'>
-			<input type='submit' title='Send orders for processing' onClick='sendOrders();' value='Process Outstanding Orders' id='sendBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-			</form>
-		</td>
-	</tr>
+    <tr>
+	<td style='background-color:#834063;height:40px;width:50%;' valign='middle' align='center'>
+            <input type='button' title='Clear and initialise system' onClick='resetData();' value='Initialise Order System' id='startBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+        </td>
+	<td style='background-color:#834063;height:30px;width:50%;' valign='middle' align='center'>
+            <form name='orders' id='orders' method='POST' action='http://mobile.insidetrackmedia.co.uk/EOS_R.php' target='blank'>
+		<input type='hidden' name='sendOrder' id='sendOrder'>
+		<input type='submit' title='Send orders for processing' onClick='sendOrders();' value='Process Outstanding Orders' id='sendBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+            </form>
+	</td>
+    </tr>
 </table>
 </div>
 <script type='text/javascript'>
