@@ -1,0 +1,398 @@
+<!--RED*true*30@BLUE*true*10@GREEN*true*5@PURPLE*true*15-->
+
+<!DOCTYPE html>
+<head>
+<script type='text/javascript'>
+
+var domain = "www.insidetrackmedia.co.uk";
+var path = "/sandbox/";
+var file = "weighting.php";
+var weightCount = 40;
+var currentTag = 0;
+var thisPet = "ALL";
+
+var petType  = []
+petType[0] = "DOG";
+petType[1] = "CAT";
+petType[2] = "RABBIT";
+
+// This array holds the values and states of the tags
+var tagState = []
+tagState[0] = {type:"DOG",value:"CHICKEN",state:false,multi:0};
+tagState[1] = {type:"DOG",value:"SALMON",state:false,multi:0};
+tagState[2] = {type:"CAT",value:"FISH",state:false,multi:0};
+tagState[3] = {type:"DOG",value:"PURPLE",state:false,multi:0};
+tagState[4] = {type:"CAT",value:"TURKEY",state:false,multi:0};
+tagState[5] = {type:"DOG",value:"GRAINFREE",state:false,multi:0};
+tagState[6] = {type:"DOG",value:"SMALLBAG",state:false,multi:0};
+tagState[7] = {type:"RABBIT",value:"HAY",state:false,multi:0};
+tagState[8] = {type:"RABBIT",value:"GRASS",state:false,multi:0};
+tagState[9] = {type:"RABBIT",value:"NUTS",state:false,multi:0};
+tagState[10] = {type:"RABBIT",value:"SALTLICK",state:false,multi:0};
+tagState[11] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[12] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[13] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[14] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[15] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[16] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[17] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[18] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[19] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[20] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[21] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[22] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[23] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[24] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[25] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[26] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[27] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[28] = {type:"DOG",value:"NULL",state:false,multi:0};
+tagState[29] = {type:"DOG",value:"NULL",state:false,multi:0};
+
+function setPet(value)
+	{
+	if(value != "x")
+		{
+		thisPet = value;
+		document.getElementById('value').disabled = false;
+		var tagListing = "<select id='value' style='width:100%' onchange='updateLists(this.value)'><option value='x'>Select Tag</option>";
+		for(a=0;a<tagState.length;a++)
+			{
+			if(tagState[a]["type"] == thisPet)
+				{tagListing = tagListing + "<option value='"+a+"'>"+tagState[a]["value"]+"</option>";}
+			}
+		tagListing = tagListing + "</select>";
+		document.getElementById('tagSelect').innerHTML = tagListing;
+		document.getElementById("state").selectedIndex = "1";
+		document.getElementById("multi").selectedIndex = "0";
+		document.getElementById("state").disabled = true;
+		document.getElementById("multi").disabled = true;
+		getURL();
+		showList();
+		}
+	}
+
+// This function just sets the state of the selected tag
+function updateTags()
+	{
+	if(document.getElementById('value').value != "x")
+		{
+		var thisID = document.getElementById('value').value;
+		var thisState = document.getElementById('state').value;
+		var thisMulti = document.getElementById('multi').value
+		tagState[thisID]["state"] = thisState;
+		tagState[thisID]["multi"] = thisMulti;
+		getURL();
+		showList();
+		}
+	}
+function getURL()
+	{
+	var sendString = ""; "http://"+domain+path+file+"?TL=";
+	var isDirty = false;
+	for(i=0;i<tagState.length;i++)
+		{
+		console.log(tagState[i]["state"]);
+		if(tagState[i]["state"] == "true")
+			{
+			if(tagState[i]["type"] == thisPet)
+				{
+				if(isDirty == false)
+					{
+					if(tagState[i]["multi"] > 0)
+						{
+						sendString = sendString + tagState[i]["value"] + "*" + tagState[i]["state"] + "*" + tagState[i]["multi"];
+						isDirty = true;
+						}
+					}
+				else
+					{
+					if(tagState[i]["multi"] > 0)
+						{
+						sendString = sendString + "@" + tagState[i]["value"] + "*" + tagState[i]["state"] + "*" + tagState[i]["multi"];
+						}
+					}
+				}
+			}
+		}
+		if(isDirty == false)
+			{
+			document.getElementById('URLout').value = "http://"+domain+path+file;
+			}
+		else
+			{
+			if(thisPet != "")
+				{
+				document.getElementById('URLout').value =  "http://"+domain+path+file+"?PT="+thisPet+"&TL="+sendString;
+				}
+			}
+		}
+function showList()
+	{
+	var oStr = "<table width='100%' style='background-color:#F4F4F4;border: 1px solid #834063' cellspacing='0'>"+
+	"<tr><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063;font-weight:bold'>Pet Type</td><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063;font-weight:bold'>Tag Value</td><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063;font-weight:bold'>State</td><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063;font-weight:bold'>Weight</td></tr>";
+	for(i=0;i<tagState.length;i++)
+		{
+		if(tagState[i]["state"] == "true")
+			{
+			if(tagState[i]["type"] ==  thisPet)
+				{
+				oStr = oStr + "<tr><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063;font-weight:bold'>" + tagState[i]["type"] + "</td><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063;font-weight:bold'>" + tagState[i]["value"] + "</td><td style='font-family:arial;color:#834063;width:10%;border-bottom:1px solid #834063;font-weight:bold'>" + tagState[i]["state"] + "</td><td style='font-family:arial;color:#834063;width:10%;border-bottom:1px solid #834063;font-weight:bold'>" + tagState[i]["multi"] + "</td></tr>";
+				}
+			}
+		else
+			{
+			if(tagState[i]["type"] == thisPet)
+				{
+				oStr = oStr + "<tr><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063'>" + tagState[i]["type"] + "</td><td style='font-family:arial;color:#834063;border-bottom:1px solid #834063'>" + tagState[i]["value"] + "</td><td style='font-family:arial;color:#834063;width:10%;border-bottom:1px solid #834063'>" + tagState[i]["state"] + "</td><td style='font-family:arial;color:#834063;width:10%;border-bottom:1px solid #834063'>" + tagState[i]["multi"] + "</td></tr>";
+				}
+			}
+		}
+	document.getElementById('tagList').innerHTML = oStr;
+	}
+function testURL()
+	{
+	var newTab = true;
+	var thisURL = document.getElementById('URLout').value;
+	var a = document.createElement('a');
+	a.href = thisURL;
+	if (newTab == true)
+		{
+	   	a.setAttribute('target', '_blank');
+	   	}
+	   	a.click();
+	}
+function copyToClipboard()
+	{
+	var text = document.getElementById('URLout').value;
+  	window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
+	}
+function setBaseURL()
+	{
+	document.getElementById('URLout').value = "http://"+domain+path+file;
+	}
+function setLists()
+	{
+	var MVlist = "<select id='multi' style='width:100%' onChange='updateTags();' disabled>"+
+	"<option value='0'>Select Weight</option>";
+	for(b=1;b<weightCount+1;b++)
+		{
+		MVlist = MVlist + "<option value='"+b+"'>"+b+"</option>";
+		}
+	MVlist = MVlist + "</select>";
+	document.getElementById('MV').innerHTML = MVlist;
+	var TFlist = "<select id='state' style='width:100%' onchange='resetTag(this.value)' disabled>"+
+	"<option value='true'>True</option>"+
+	"<option value='false' selected>False</option>"+
+	"</select>";
+	document.getElementById('TF').innerHTML = TFlist;
+	}
+function updateLists(id)
+	{
+	if(document.getElementById('value').value != "x")
+		{
+		document.getElementById('state').disabled = false;
+		}
+
+	currentTag = id;
+	if(tagState[id]["state"] == "true")
+		{
+		var TFlist = "<select id='state' style='width:100%' onchange='resetTag(this.value)'>"+
+		"<option value='true' selected>True</option>"+
+		"<option value='false'>False</option>"+
+		"</select>";
+		}
+	else
+		{
+		var TFlist = "<select id='state' style='width:100%' onchange='resetTag(this.value)'>"+
+		"<option value='true'>True</option>"+
+		"<option value='false' selected>False</option>"+
+		"</select>";
+		}
+	document.getElementById('TF').innerHTML = TFlist;
+	var MVlist = "<select id='multi' style='width:100%' onChange='updateTags();'>"+
+	"<option value='0'>Select Weight</option>";
+	for(i=1;i<weightCount+1;i++)
+		{
+		if(tagState[id]["multi"] == i)
+			{
+			MVlist = MVlist + "<option value='"+i+"' selected>"+i+"</option>";
+			}
+		else
+			{
+			MVlist = MVlist + "<option value='"+i+"'>"+i+"</option>";
+			}
+		}
+	MVlist = MVlist + "</select>";
+	document.getElementById('MV').innerHTML = MVlist;
+	}
+function resetTag(state)
+	{
+	if(state == "false")
+		{
+		tagState[currentTag]["multi"] = 1;
+		var MVlist = "<select id='multi' style='width:100%' onChange='updateTags();'>"+
+		"<option value='0' selected>Select Weight</option>";
+		for(i=1;i<weightCount;i++)
+			{
+			if(tagState[currentTag]["multi"] == i)
+				{
+				MVlist = MVlist + "<option value='"+i+"'>"+i+"</option>";
+				}
+			else
+				{
+				MVlist = MVlist + "<option value='"+i+"'>"+i+"</option>";
+				}
+			}
+		MVlist = MVlist + "</select>";
+		document.getElementById('MV').innerHTML = MVlist;
+		document.getElementById('multi').disabled = true;
+		updateTags();
+		}
+	else
+		{
+		document.getElementById('multi').disabled = false;
+		updateTags();
+		}
+	getURL();
+	showList();
+	}
+function setMax(maxValue)
+	{
+	weightCount = +maxValue;
+	TFValue = document.getElementById('state').value;
+	if(TFValue != "false")
+		{
+		var MVlist = "<select id='multi' style='width:100%' onChange='updateTags();'>"+
+		"<option value='0' selected>Select Weight</option>";
+		}
+	else
+		{
+		var MVlist = "<select id='multi' style='width:100%' onChange='updateTags();' disabled>"+
+		"<option value='0' selected>Select Weight</option>";
+		}
+	for(i=1;i<weightCount+1;i++)
+		{
+		MVlist = MVlist + "<option value='"+i+"'>"+i+"</option>";
+		}
+	MVlist = MVlist + "</select>";
+	document.getElementById('MV').innerHTML = MVlist;
+	}
+
+function SaveToLocal()
+	{
+	// store array to localstorage
+	localStorage.setItem("petType",  JSON.stringify(petType));
+	localStorage.setItem("tagState",  JSON.stringify(tagState));
+	alert("Data Saved");
+	}
+function GetFromLocal()
+	{
+	// retrieve stored data (JSON stringified) and convert
+	var storedPetData = localStorage.getItem("petType");
+	if (storedPetData)
+		{petType = JSON.parse(storedPetData);}
+	var storedTagData = localStorage.getItem("tagState");
+	if (storedTagData)
+		{tagState = JSON.parse(storedTagData);}
+	}
+</script>
+<style>
+body
+	{
+	background-color:#F4F4F4;
+	}
+</style>
+</head>
+<body onload='GetFromLocal(); showList();setBaseURL();setLists();'>
+<center>
+<h2 style='font-family:arial;color:#834063'>Parcelpet Email Link Configuration</h2>
+<table width='60%' border='0' cellspacing='5' cellpadding='5'>
+		<tr>
+			<td colspan='4' style='background-color:#F4F4F4;border-radius:5px;border:1px solid #834063' align='center'>
+				<input style='width:99%' type='text'  value='' name='URLout' id='URLout'>
+			</td>
+		</tr>
+		</tr>
+			<td style='width:33%;background-color:#F4F4F4;border-radius:5px;border:1px solid #834063'>
+				<input style='height:30px;width:100%;background-color:#834063;color:#FFF;border:1px solid #FFF;border-radius:5px' type='button' value='Test Link' onClick='testURL()'>
+			</td>
+			<td style='width:33%;background-color:#F4F4F4;border-radius:5px;border:1px solid #834063'>
+				<input style='height:30px;width:100%;background-color:#834063;color:#FFF;border:1px solid #FFF;border-radius:5px' type='button' id='copyURL' value='Copy URL' onclick='copyToClipboard();'>
+			</td>
+			<td style='width:33%;background-color:#F4F4F4;border-radius:5px;border:1px solid #834063' align='center'>
+				<input style='height:30px;width:100%;background-color:#834063;color:#FFF;border:1px solid #FFF;border-radius:5px' type='button' id='saveLocal' value='Save Data' onclick='SaveToLocal();'>
+			</td>
+		</tr>
+		<tr>
+			<td style='background-color:#F4F4F4;border-radius:5px;border:1px solid #834063'>
+			<label for='petType'style='font-family:arial;color:#834063;width:30%;'>Pet Type</label>
+			<select style='width:79%' id='maxWeight' onchange='setPet(this.value)'>
+				<option value='x'>Select Pet Type</option>
+					<script type='text/javascript'>
+						for(i=0;i<petType.length;i++)
+							{
+							document.write("<option value='"+petType[i]+"'>"+petType[i]+"</option>");
+							}
+							</script>
+				</select>
+			</td>
+			<td style='background-color:#F4F4F4;border-radius:5px;border:1px solid #834063;font-family:arial;color:#834063' align='center'>
+			<strong>repeat</strong> pet food delivery
+			</td>
+			<td style='background-color:#F4F4F4;border-radius:5px;border:1px solid #834063'>
+			<label for='maxWeight'style='font-family:arial;color:#834063;width:30%'>Max Tag Value</label>
+				<select style='width:69%' id='maxWeight' onchange='setMax(this.value)'>
+					<option value='0'>Select Max Weight Value</option>
+					<script type='text/javascript'>
+						for(x=1;x<101;x++)
+							{
+							if(x == weightCount)
+								{
+								document.write("<option value='"+x+"' selected>"+x+"</option>");
+								}
+							else
+								{
+								document.write("<option value='"+x+"'>"+x+"</option>");
+								}
+							}
+					</script>
+				</select>
+			</td>
+		</tr>
+</table>
+<table width='60%' border='0' cellspacing='5' cellpadding='5'>
+	<tr>
+		<td style='background-color:#F4F4F4;border-radius:5px;border:1px solid #834063' colspan='2'>
+			<div id='tagSelect'>
+				<select id='value' style='width:100%' onchange='updateLists(this.value)' disabled>
+				<option value='x'>Select Tag</option>
+					<script type='text/javascript'>
+						for(a=0;a<tagState.length;a++)
+							{
+							document.write("<option value='"+a+"'>"+tagState[a]["value"]+"</option>");
+							}
+					</script>
+				</select>
+			</div>
+		</td>
+		<td style='background-color:#F4F4F4;border-radius:5px;border:1px solid #834063'>
+			<div id='TF'>
+			</div>
+		</td>
+		<td style='background-color:#F4F4F4;border-radius:5px;border:1px solid #834063'>
+			<div id='MV'>
+			</div>
+		</td>
+	</tr>
+</table>
+<table width='60%' border='0' cellspacing='5' cellpadding='5'>
+	<tr>
+		<td colspan='4' style='border-radius:5px;border:1px solid #834063'>
+			<div id='tagList'></div>
+		</td>
+	</tr>
+</table>
+</center>
+</body>
+</html>
