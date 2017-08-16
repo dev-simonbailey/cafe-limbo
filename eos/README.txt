@@ -1,1 +1,1 @@
-This is folder for EOS Files
+EOS Project Files
