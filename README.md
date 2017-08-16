@@ -1,2 +1,2 @@
-# cafe-limbo
+# Cafe-Limbo
 Main Repo
