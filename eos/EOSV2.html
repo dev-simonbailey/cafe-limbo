@@ -1084,83 +1084,26 @@ function getUserLocation()
     <tr>
         <td>
             <div id='dog2' style='display:none;'>
-				<table width='100%' cellspacing='0' class='rcorners1'>
-					<tr>
-						<td colspan='4' style='background-color:#834063;height:120px' valign='middle' align='center'>
-							<input type='text' id='thisInput_210' placeholder='Dog Name' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
-							<select id='weight2' onChange='showCost2();' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-								<option value='0'>Select Weight</option>
-								<option value='1'>1 kg</option>
-								<option value='2'>2 kg</option>
-								<option value='3'>3 kg</option>
-								<option value='4'>4 kg</option>
-								<option value='5'>5 kg</option>
-								<option value='6'>6 kg</option>
-								<option value='7'>7 kg</option>
-								<option value='8'>8 kg</option>
-								<option value='9'>9 kg</option>
-								<option value='10'>10 kg</option>
-								<option value='11'>11 kg</option>
-								<option value='12'>12 kg</option>
-								<option value='13'>13 kg</option>
-								<option value='14'>14 kg</option>
-								<option value='15'>15 kg</option>
-								<option value='16'>16 kg</option>
-								<option value='17'>17 kg</option>
-								<option value='18'>18 kg</option>
-								<option value='19'>19 kg</option>
-								<option value='20' selected>20 kg</option>
-								<option value='21'>21 kg</option>
-								<option value='22'>22 kg</option>
-								<option value='23'>23 kg</option>
-								<option value='24'>24 kg</option>
-								<option value='25'>25 kg</option>
-								<option value='26'>26 kg</option>
-								<option value='27'>27 kg</option>
-								<option value='28'>28 kg</option>
-								<option value='29'>29 kg</option>
-								<option value='30'>30 kg</option>
-								<option value='31'>31 kg</option>
-								<option value='32'>32 kg</option>
-								<option value='33'>33 kg</option>
-								<option value='34'>34 kg</option>
-								<option value='35'>35 kg</option>
-								<option value='36'>36 kg</option>
-								<option value='37'>37 kg</option>
-								<option value='38'>38 kg</option>
-								<option value='39'>39 kg</option>
-								<option value='40'>40 kg</option>
-								<option value='41'>41 kg</option>
-								<option value='42'>42 kg</option>
-								<option value='43'>43 kg</option>
-								<option value='44'>44 kg</option>
-								<option value='45'>45 kg</option>
-								<option value='46'>46 kg</option>
-								<option value='47'>47 kg</option>
-								<option value='48'>48 kg</option>
-								<option value='49'>49 kg</option>
-								<option value='50'>50 kg</option>
-								<option value='51'>51 kg</option>
-								<option value='52'>52 kg</option>
-								<option value='53'>53 kg</option>
-								<option value='54'>54 kg</option>
-								<option value='55'>55 kg</option>
-								<option value='56'>56 kg</option>
-								<option value='57'>57 kg</option>
-								<option value='58'>58 kg</option>
-								<option value='59'>59 kg</option>
-								<option value='60'>60 kg</option>
-								<option value='61'>61 kg</option>
-								<option value='62'>62 kg</option>
-								<option value='63'>63 kg</option>
-								<option value='64'>64 kg</option>
-								<option value='65'>65 kg</option>
-								<option value='66'>66 kg</option>
-								<option value='67'>67 kg</option>
-								<option value='68'>68 kg</option>
-								<option value='69'>69 kg</option>
-								<option value='70'>70 kg</option>
-							</select>
+		<table width='100%' cellspacing='0' class='rcorners1'>
+                    <tr>
+			<td colspan='4' style='background-color:#834063;height:120px' valign='middle' align='center'>
+                            <input type='text' id='thisInput_210' placeholder='Dog Name' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/><br /><br />
+                            <select id='weight2' onChange='showCost2();' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+                                <option value='0'>Select Weight</option>
+                                <script type='text/javascript'>
+                                    for(i=0;i<70;i++)
+                                        {
+                                        if)(i===20)
+                                            {
+                                            document.write("<option value='"+i+"' selected>+i+"kg</option>);  
+                                            }
+                                        else
+                                            {
+                                            document.write("<option value='"+i+"'>+i+"kg</option>);  
+                                            }
+                                        }
+                                </script>
+                            </select>
 							<br /><br />
 							<select id='thisInput_212' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;' onChange='showCost2();'>
 								<option value='CR' selected>Chicken & Rice</option>
@@ -1582,35 +1525,35 @@ function getUserLocation()
     </tr>
 </table>
 <div id='admin' style='display:none'>
-<div id="result" style='font-family:arial;margin-top:30px;'>Please Initialise</div>
-<br /><br />
-<table style='width:100%;border-spacing: 0px;' class='rcorners1'>
-    <tr>
-	<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
-            <input type='text' id='thisUser' placeholder='Team Member' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
-	</td>
-	<td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
-            <input type='text' id='thisLocation' placeholder='Enter Location' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
-        </td>
-	<td style='background-color:#834063;height:30px;' valign='middle' align='center'>
-            <input style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' type='button' onclick='setUserLocation();' title='Save Details' value='&#43;'/>
-	</td>
-    </tr>
-</table>
-<br /><br />
-<table style='width:100%;border-spacing: 0px;' class='rcorners1'>
-    <tr>
-	<td style='background-color:#834063;height:40px;width:50%;' valign='middle' align='center'>
-            <input type='button' title='Clear and initialise system' onClick='resetData();' value='Initialise Order System' id='startBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-        </td>
-	<td style='background-color:#834063;height:30px;width:50%;' valign='middle' align='center'>
-            <form name='orders' id='orders' method='POST' action='http://mobile.insidetrackmedia.co.uk/EOS_R.php' target='blank'>
-		<input type='hidden' name='sendOrder' id='sendOrder'>
-		<input type='submit' title='Send orders for processing' onClick='sendOrders();' value='Process Outstanding Orders' id='sendBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
-            </form>
-	</td>
-    </tr>
-</table>
+    <div id="result" style='font-family:arial;margin-top:30px;'>Please Initialise</div>
+    <br /><br />
+    <table style='width:100%;border-spacing: 0px;' class='rcorners1'>
+        <tr>
+            <td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
+                <input type='text' id='thisUser' placeholder='Team Member' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
+            </td>
+            <td style='background-color:#834063;height:30px;width:48%;' valign='middle' align='center'>
+                <input type='text' id='thisLocation' placeholder='Enter Location' style='padding:5px;width:90%;border-radius: 25px;height:30px;color:#834063;font-size:18px;border:0px;'/>
+            </td>
+            <td style='background-color:#834063;height:30px;' valign='middle' align='center'>
+                <input style='border-radius: 50% 50%;width:48px;height:48px;font-size:44px;border:0px;color:#824963;cursor:pointer' type='button' onclick='setUserLocation();' title='Save Details' value='&#43;'/>
+            </td>
+        </tr>
+    </table>
+    <br /><br />
+    <table style='width:100%;border-spacing: 0px;' class='rcorners1'>
+        <tr>
+            <td style='background-color:#834063;height:40px;width:50%;' valign='middle' align='center'>
+                <input type='button' title='Clear and initialise system' onClick='resetData();' value='Initialise Order System' id='startBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+            </td>
+            <td style='background-color:#834063;height:30px;width:50%;' valign='middle' align='center'>
+                <form name='orders' id='orders' method='POST' action='http://mobile.insidetrackmedia.co.uk/EOS_R.php' target='blank'>
+                    <input type='hidden' name='sendOrder' id='sendOrder'>
+                    <input type='submit' title='Send orders for processing' onClick='sendOrders();' value='Process Outstanding Orders' id='sendBut' style='padding:5px;width:90%;border-radius: 25px;height:45px;color:#834063;font-size:18px;border:0px;'>
+                </form>
+            </td>
+        </tr>
+    </table>
 </div>
 <script type='text/javascript'>
 //might as well use this container for sending the data to the server
